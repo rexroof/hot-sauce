@@ -20,5 +20,10 @@ spec:
       containers:
       - image: rexroof/hotsauce
         name: hotsauce
+        ports:
+          - containerPort: 5000
+        env:
+          - name: PEPPERS
+            value: "680"
         resources: {}
 status: {}

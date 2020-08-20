@@ -1,0 +1,24 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hotsauce-service
+spec:
+  selector:
+    app: hotsauce
+  ports:
+  # Default port used by the image
+  - port: 5000
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hotsauce-ingress
+spec:
+  rules:
+  - host: hotsauce.127.0.0.1.nip.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: hotsauce-service
+          servicePort: 5000
