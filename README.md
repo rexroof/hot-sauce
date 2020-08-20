@@ -3,6 +3,9 @@ docker container to generate hot sauce recipe
 
 ## to run this container in development mode:
 
+Make sure you have kubectl set up and local cluster, 
+I suggest kind:  <https://kind.sigs.k8s.io/docs/user/quick-start/#installation>
+
 install skaffold: <https://skaffold.dev/docs/install/>
 
 run `skaffold dev`
